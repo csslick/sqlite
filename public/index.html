@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>hello homepage</title>
+  <style>
+    * { margin: 0;}
+    body {
+      font-size: 20px;
+    }
+    header {
+      text-align: center;
+      background: #ccc;
+      padding: 1em;
+    }
+    form {
+      width: 100%;
+      margin: 2em 0;
+    }
+    input, textarea { padding: 5px;}
+    textarea{ width: 100%; margin-top: 1em;}
+    .container{ 
+      padding: 1em;
+    }
+    ul {padding: 0;}
+    li {
+      border-top: 1px solid #ccc;
+      padding: 5px;
+      list-style-type: none;
+    }
+    #comments_list span{ 
+      float: right;
+      color: #999;
+      font-size: small;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pretty Dogs</h1>
+  </header>
+  
+  <section>
+    <img
+    style="width: 100%;" 
+    src="https://thehappypuppysite.com/wp-content/uploads/2018/07/doggy-daycare-long-1024x555.jpg" alt="dogs">
+    <div class="container">
+      <h2>Leave Your commants here</h2>
+      <form action="/comments" method="POST">
+        <p><input type="text" name="name" placeholder="작성자명"></p>
+        <textarea name="comment" id="" rows="4" placeholder="당신의 애견 품종과 성격에 대해 적어주세요."></textarea>
+        <input type="submit" value="글쓰기">
+      </form>
+  
+      <article>
+        <h2>글목록</h2>
+        <ul id="comments_list">/ul>
+      </article>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>
